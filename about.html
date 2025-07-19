@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everything Nikky - About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fff0f6;
+            margin: 0;
+            color: #c2185b;
+        }
+        .modern-header {
+            background: #c2185b
+            ;
+            box-shadow: 0 2px 8px rgba(194,24,91,0.08);
+            padding-bottom: 0.5rem;
+        }
+        .modern-hero {
+            position: relative;
+            background: linear-gradient(120deg, #ffe4ec 0%, #ffd6e0 100%);
+            padding: 3rem 0 2rem 0;
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('images/hero-bg.svg') no-repeat center/cover;
+            opacity: 0.08;
+            z-index: 0;
+        }
+        .hero-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            gap: 2rem;
+        }
+        .about-profile {
+            flex: 1 1 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 24px rgba(194,24,91,0.12);
+            border: 4px solid #fff;
+            background: #ffe4ec;
+            animation: fadeIn 1.2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .about-info {
+            flex: 2 1 320px;
+        }
+        .about-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #e91e63;
+        }
+        .about-info p {
+            font-size: 1.15rem;
+            margin-bottom: 1rem;
+        }
+        .brand-highlight {
+            color: #e91e63;
+            font-weight: bold;
+        }
+        .trust-elements {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            justify-content: flex-start;
+        }
+        .trust-element {
+            background: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 2px 12px rgba(233,30,99,0.10);
+            padding: 1.2rem 1.5rem;
+            text-align: center;
+            min-width: 120px;
+            transition: transform 0.2s;
+        }
+        .trust-element:hover {
+            transform: translateY(-6px) scale(1.04);
+        }
+        .trust-icon {
+            font-size: 2rem;
+            color: #e91e63;
+            margin-bottom: 0.5rem;
+        }
+        .modern-footer {
+            background: linear-gradient(90deg, #e91e63 0%, #ffb6c1 100%);
+            color: #fff;
+            padding: 2rem 0 1rem 0;
+            margin-top: 3rem;
+        }
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.2rem;
+        }
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        .footer-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #fff;
+            object-fit: cover;
+        }
+        .footer-social a {
+            color: #fff;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.2s;
+        }
+        .footer-social a:hover {
+            color: #e91e63;
+        }
+        .footer-meta {
+            font-size: 0.95rem;
+            text-align: center;
+        }
+        @media (max-width: 700px) {
+            .hero-content {
+                flex-direction: column;
+                gap: 1.2rem;
+            }
+            .about-info h2 {
+                font-size: 2rem;
+            }
+            .trust-elements {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="modern-header">
+        <div class="logo">
+            <a href="index.html"><img src="logo.jpeg" alt="Everything Nikky Logo" class="logo-img"></a>
+            <h1>Everything Nikky</h1>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="treats.html">Treats</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <i class="fas fa-moon" id="dark-mode-toggle"></i>
+            <a href="cart.html" class="cart-icon">🛒<span id="cart-count">0</span></a>
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+    <main>
+        <section class="modern-hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="about-profile">
+                    <img src="logo.jpeg" alt="Everything Nikky Logo" class="profile-img">
+                </div>
+                <div class="about-info">
+                    <h2>About Us</h2>
+                    <p>Hey LASU students! Welcome to <span class="brand-highlight">Everything Nikky</span>, your one-stop shop for all your campus essentials. We know the student hustle is real, so we've got you covered with affordable and trendy items to keep you looking and feeling your best.</p>
+                    <p>From lecture-ready lip gloss to late-night study session chin chin, we've got everything you need to slay your way through the semester. We're a student-run business, so we get it. We're all about providing quality products without breaking the bank.</p>
+                    <div class="trust-elements">
+                        <div class="trust-element">
+                            <i class="fas fa-user-graduate trust-icon"></i>
+                            <h3>587+</h3>
+                            <p>Students Served</p>
+                        </div>
+                        <div class="trust-element">
+                            <i class="fas fa-star trust-icon"></i>
+                            <h3>5-Star</h3>
+                            <p>Rating</p>
+                        </div>
+                        <div class="trust-element">
+                            <i class="fas fa-hand-holding-heart trust-icon"></i>
+                            <h3>100%</h3>
+                            <p>Student-Owned</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="modern-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="logo.jpeg" alt="Everything Nikky Logo" class="footer-logo">
+                <span>Everything Nikky</span>
+            </div>
+            <div class="footer-social">
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+            <div class="footer-meta">
+                <p>&copy; 2024 Everything Nikky. All rights reserved.</p>
+                <p>Created by <a href="http://www.darc.com.ng" target="_blank">Darc Designs</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        // Replace with your actual configuration
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</body>
+</html>

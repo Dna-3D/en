@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everything Nikky - Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fff0f6;
+            margin: 0;
+            color: #c2185b;
+        }
+        .modern-header {
+            background: #ffb6c1;
+            box-shadow: 0 2px 8px rgba(194,24,91,0.08);
+            padding-bottom: 0.5rem;
+        }
+        .modern-contact-hero {
+            position: relative;
+            background: linear-gradient(120deg, #ffe4ec 0%, #ffd6e0 100%);
+            padding: 3rem 0 2rem 0;
+            overflow: hidden;
+        }
+        .contact-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('images/hero-bg.svg') no-repeat center/cover;
+            opacity: 0.08;
+            z-index: 0;
+        }
+        .contact-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            margin: 0 auto;
+            gap: 1.5rem;
+            background: #fff;
+            border-radius: 1.5rem;
+            box-shadow: 0 2px 12px rgba(233,30,99,0.10);
+            padding: 2rem 2rem 2.5rem 2rem;
+        }
+        .contact-content h2 {
+            font-size: 2.2rem;
+            color: #e91e63;
+            margin-bottom: 0.5rem;
+        }
+        .contact-content p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            width: 100%;
+            margin-top: 1.5rem;
+        }
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: #ffe4ec;
+            border-radius: 1rem;
+            padding: 1rem 1.2rem;
+            box-shadow: 0 1px 6px rgba(233,30,99,0.07);
+            transition: box-shadow 0.2s;
+        }
+        .contact-method:hover {
+            box-shadow: 0 2px 12px rgba(233,30,99,0.15);
+        }
+        .contact-icon {
+            font-size: 1.7rem;
+            color: #e91e63;
+        }
+        .contact-link {
+            color: #c2185b;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        .contact-link:hover {
+            color: #e91e63;
+            text-decoration: underline;
+        }
+        .modern-footer {
+            background: linear-gradient(90deg, #e91e63 0%, #ffb6c1 100%);
+            color: #fff;
+            padding: 2rem 0 1rem 0;
+            margin-top: 3rem;
+        }
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.2rem;
+        }
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        .footer-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #fff;
+            object-fit: cover;
+        }
+        .footer-social a {
+            color: #fff;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.2s;
+        }
+        .footer-social a:hover {
+            color: #e91e63;
+        }
+        .footer-meta {
+            font-size: 0.95rem;
+            text-align: center;
+        }
+        @media (max-width: 700px) {
+            .contact-content {
+                padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+            }
+            .contact-content h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="modern-header">
+        <div class="logo">
+            <a href="index.html"><img src="logo.jpeg" alt="Everything Nikky Logo" class="logo-img"></a>
+            <h1>Everything Nikky</h1>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="treats.html">Treats</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <i class="fas fa-moon" id="dark-mode-toggle"></i>
+            <a href="cart.html" class="cart-icon">🛒<span id="cart-count">0</span></a>
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="modern-contact-hero">
+            <div class="contact-bg"></div>
+            <div class="contact-content">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you! Whether you have a question about our products, want to collaborate, or just want to say hi, our team is ready to answer all your questions.</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fab fa-whatsapp contact-icon"></i>
+                        <a href="https://wa.me/2348131823671" class="contact-link" target="_blank">WhatsApp: +234 813 182 3671</a>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <a href="mailto:everythingnikky@gmail.com" class="contact-link">Email: everythingnikky@gmail.com</a>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fab fa-instagram contact-icon"></i>
+                        <a href="#" class="contact-link">Instagram: @everythingnikky</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="modern-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="logo.jpeg" alt="Everything Nikky Logo" class="footer-logo">
+                <span>Everything Nikky</span>
+            </div>
+            <div class="footer-social">
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+            <div class="footer-meta">
+                <p>&copy; 2024 Everything Nikky. All rights reserved.</p>
+                <p>Created by <a href="http://www.darc.com.ng" target="_blank">Darc Designs</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        // Replace with your actual configuration
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>

@@ -39,6 +39,31 @@
             <p>Your one-stop shop for all girl essentials and delicious chin chin!</p>
             <a href="products.html" class="btn">Shop Now</a>
         </section>
+                <section class="carousel-section">
+            <h3 style="text-align:center; margin-top:2rem;">Featured Products</h3>
+            <div class="carousel" id="products-carousel">
+                <div class="carousel-track">
+                    <div class="carousel-item"><img src="images/lipgloss.jpg" alt="Lip Gloss"><p>Lip Gloss</p></div>
+                    <div class="carousel-item"><img src="images/eyeliner.jpg" alt="Eyeliner"><p>Eyeliner</p></div>
+                    <div class="carousel-item"><img src="images/scrunchie.jpg" alt="Scrunchie"><p>Scrunchie</p></div>
+                </div>
+                <button class="carousel-btn prev" onclick="moveCarousel('products-carousel', -1)">&#10094;</button>
+                <button class="carousel-btn next" onclick="moveCarousel('products-carousel', 1)">&#10095;</button>
+            </div>
+        </section>
+        <!-- Treats Carousel -->
+        <section class="carousel-section">
+            <h3 style="text-align:center; margin-top:2rem;">Delicious Treats</h3>
+            <div class="carousel" id="treats-carousel">
+                <div class="carousel-track">
+                    <div class="carousel-item"><img src="images/chinchin.jpg" alt="Chin Chin"><p>Chin Chin</p></div>
+                    <div class="carousel-item"><img src="images/cookies.jpg" alt="Cookies"><p>Cookies</p></div>
+                    <div class="carousel-item"><img src="images/cupcake.jpg" alt="Cupcake"><p>Cupcake</p></div>
+                </div>
+                <button class="carousel-btn prev" onclick="moveCarousel('treats-carousel', -1)">&#10094;</button>
+                <button class="carousel-btn next" onclick="moveCarousel('treats-carousel', 1)">&#10095;</button>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -54,8 +79,30 @@
     </footer>
 
     <script src="main.js"></script>
-</body>
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script>
+    // Simple carousel logic
+    function moveCarousel(id, direction) {
+        var carousel = document.getElementById(id);
+        var track = carousel.querySelector('.carousel-track');
+        var items = track.children;
+        var itemWidth = items[0].offsetWidth;
+        var current = parseInt(track.getAttribute('data-index') || '0');
+        var max = items.length - 1;
+        current += direction;
+        if (current < 0) current = 0;
+        if (current > max) current = max;
+        track.style.transform = 'translateX(' + (-itemWidth * current) + 'px)';
+        track.setAttribute('data-index', current);
+    }
+    // Initialize carousels
+    document.addEventListener('DOMContentLoaded', function() {
+        var tracks = document.querySelectorAll('.carousel-track');
+        tracks.forEach(function(track) {
+            track.setAttribute('data-index', '0');
+            track.style.transform = 'translateX(0px)';
+        });
+    });
+    </script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
     <script>
@@ -72,4 +119,5 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
     </script>
+</body>
 </html>
